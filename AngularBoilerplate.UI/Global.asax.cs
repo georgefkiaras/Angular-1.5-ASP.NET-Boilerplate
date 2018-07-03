@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AngularBoilerplate.UI.Controllers.SignalR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,8 @@ namespace AngularBoilerplate.UI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        private SignalMessaging _signalMessaging;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -18,6 +21,7 @@ namespace AngularBoilerplate.UI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            _signalMessaging = new SignalMessaging();
         }
     }
 }

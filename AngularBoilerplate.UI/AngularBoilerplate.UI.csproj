@@ -210,9 +210,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Api\StopsController.cs" />
+    <Compile Include="Controllers\SignalR\SignalHub.cs" />
+    <Compile Include="Controllers\SignalR\SignalMessaging.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClockResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -294,7 +297,6 @@
   <ItemGroup>
     <Folder Include="App\Boilerplate\dist\" />
     <Folder Include="App\Boilerplate\fonts\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
