@@ -1,69 +1,26 @@
 ﻿(function () {
 
     var module = angular.module("boilerplateModule");
-    var controller = function (hubProxy, stopsRepo, localStorage, Hub, $rootScope, $timeout) {
+    var controller = function (hubProxy, stopsRepo, localStorage) {
         var model = this;
         model.autoReconnect = true;
         model.filterObj = new Object();
 
-        //console.log("stops route controller now loaded.");
-        //model.time = "--:--:--";
-        ////https://github.com/JustMaier/angular-signalr-hub
-        //var hubOptions = {
-        //    listeners: {
-        //        'ping': function (data) {
-        //            $rootScope.$broadcast('loading-started');
-        //            model.time = data.ServerTime;
-        //            $rootScope.$apply();
-        //            $timeout(function () {
-        //                $rootScope.$broadcast('loading-complete');
-        //            }, 50);
-        //        }
-        //    },
-        //    rootPath: '../../SignalR',
-        //    useSharedConnection: false,
-        //    methods: ['joinGroup'],
-        //    stateChanged: function (state) {
-        //        switch (state.newState) {
-        //            case $.signalR.connectionState.connecting:
-        //                console.log("SignalR connecting...");
-        //                break;
-        //            case $.signalR.connectionState.connected:
-        //                console.log("SignalR connected.");
-        //                hubConnected();
-        //                break;
-        //            case $.signalR.connectionState.reconnecting:
-        //                console.log("SignalR reconnecting...");
-        //                break;
-        //            case $.signalR.connectionState.disconnected:
-        //                console.log("SignalR disconnected.");
-        //                hubDisconnected();
-        //                break;
-        //        }
-        //    }
-        //};
+        model.time = "--:--:--.---";
+        var timeHub = hubProxy('../../', 'signalHub', 'clock');
+        timeHub.on("ping", function (data) {
+            model.time = data.ServerTime;
+            model.dayOfTheWeek = data.DayOfTheWeek;
+            model.month = data.Month;
+            model.date = data.Date;
+            model.year = data.Year;
+            model.tic = data.Tic;
+            model.toc = !data.Tic;
+        });
 
-        //var hub = new Hub('transitHub', hubOptions);
-
-        //var hubConnected = function () {
-        //    //console.log("joining clock group...");
-        //    hub.joinGroup("clock");
-        //}
-
-        //var hubDisconnected = function () {
-        //    if (model.autoReconnect) {
-        //        console.log("Reconnecting in 5 seconds...");
-        //        $timeout(function () {
-        //            hub.connect();
-        //        }, 5000);
-        //    }
-
-        //}
-
-        //model.$routerOnDeactivate = function () {
-        //    model.autoReconnect = false;
-        //    hub.disconnect();
-        //}
+        model.$routerOnDeactivate = function () {
+            timeHub.disconnect();
+        }
 
         var key = "stops";
         model.stops = localStorage.getObject(key);
@@ -79,7 +36,7 @@
     module.component("stops", {
         templateUrl: "boilerplateApp/Components/stops.component.html",
         controllerAs: "model",
-        controller: ['hubProxy', 'stopsRepo', 'localStorage', 'Hub', '$rootScope','$timeout', controller]
+        controller: ['hubProxy', 'stopsRepo', 'localStorage', controller]
     });
 
 }());

@@ -7,12 +7,10 @@
   "license": "GPL-1.0-or-later",
   "dependencies": {
     "angular": "1.6.9",
-    "angular-signalr-hub": "~1.6.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^3.3.6",
     "jquery": "^3.3.1",
-    "ngcomponentrouter": "^2.1.0",
-    "signalr": "^2.2.3"
+    "ngcomponentrouter": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

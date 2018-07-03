@@ -1,11 +1,25 @@
 ﻿<h2>
     Stops ({{model.stops.length}})
+    <span class="pull-right badge clockBadge">
+        {{model.time}}
+    </span>
 </h2>
-<p>{{model.time}}</p>
-<p>
-    <input type="text" ng-model="model.filterObj.Name" placeholder="Search Stops" />
-    <span class="glyphicon glyphicon-search signSearch"></span>
-</p>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="model.filterObj.Name" placeholder="Filter Stops">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search signSearch"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <hr />
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="stop in model.stops | filter:model.filterObj">

@@ -35,7 +35,7 @@
                     'node_modules/angular-animate/angular-animate.min.js',
                     //'lib/angular_1_router.min.js',
                     'lib/angular_1_router_orig_bower.js',
-                    'node_modules/angular-signalr-hub/signalr-hub.min.js',
+                    //'node_modules/angular-signalr-hub/signalr-hub.min.js',
                     'node_modules/babel-polyfill/dist/polyfill.min.js'
                 ],
                 dest: 'dist/libraries.js'
