@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularBoilerplate.UI", "AngularBoilerplate.UI\AngularBoilerplate.UI.csproj", "{32E52011-05CC-4AF5-889E-B23647A1452F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularBoilerplate.Data", "AngularBoilerplate.Data\AngularBoilerplate.Data.csproj", "{F70B0001-6B4E-4C47-9A3F-DF178FC6A05D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E52011-05CC-4AF5-889E-B23647A1452F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E52011-05CC-4AF5-889E-B23647A1452F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E52011-05CC-4AF5-889E-B23647A1452F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E52011-05CC-4AF5-889E-B23647A1452F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70B0001-6B4E-4C47-9A3F-DF178FC6A05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70B0001-6B4E-4C47-9A3F-DF178FC6A05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70B0001-6B4E-4C47-9A3F-DF178FC6A05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70B0001-6B4E-4C47-9A3F-DF178FC6A05D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9E630CC-486D-4898-ABB9-3DEC70F6BC7B}
+	EndGlobalSection
+EndGlobal
