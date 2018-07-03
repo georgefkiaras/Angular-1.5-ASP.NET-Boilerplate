@@ -44,7 +44,7 @@
     <%if (!DevMode)
         { %>
 
-    <%--<script src="dist/app.min.js"></script>--%>
+    <script src="dist/app.min.js"></script>
 
     <%} %>
 

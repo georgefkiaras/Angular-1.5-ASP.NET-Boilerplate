@@ -10,7 +10,7 @@
         //            optimization: 2
         //        },
         //        files: {
-        //            "css/Subway.css": "css/Subway.less" // target : src
+        //            "css/Target.css": "css/Source.less" // target : src
         //        }
         //    }
         //},
@@ -35,20 +35,19 @@
                     'node_modules/angular-animate/angular-animate.min.js',
                     //'lib/angular_1_router.min.js',
                     'lib/angular_1_router_orig_bower.js',
-                    //'node_modules/angular-signalr-hub/signalr-hub.min.js',
                     'node_modules/babel-polyfill/dist/polyfill.min.js'
                 ],
                 dest: 'dist/libraries.js'
             },
-            //app: {
-            //    src: [
-            //        '../Common/*.js', //common modules/services outside our module
-            //        'SubwayApp/module.js',
-            //        'SubwayApp/subway-app-root.component.js',
-            //        'SubwayApp/Components/**/*.js', //folder and subfolders
-            //    ],
-            //    dest: 'build/app_joined.js'
-            //}
+            app: {
+                src: [
+                    '../Common/*.js', //common modules/services outside our module
+                    'BoilerplateApp/module.js',
+                    'BoilerplateApp/boilerplate-app-root.component.js',
+                    'BoilerplateApp/Components/**/*.js', //folder and subfolders
+                ],
+                dest: 'build/app_joined.js'
+            }
         },
         concat_css: {
             options: {},
@@ -76,24 +75,24 @@
         //    }
         //  }
         //},
-        //uglify: {
-        //    options: {
-        //        compress: true,
-        //        mangle: false,
-        //        sourceMap: false
-        //    },
-        //    target: {
-        //        src: ['build/app_joined.js'],
-        //        dest: 'dist/app.min.js'
-        //    }
-        //},
+        uglify: {
+            options: {
+                compress: true,
+                mangle: false,
+                sourceMap: false
+            },
+            target: {
+                src: ['build/app_joined.js'],
+                dest: 'dist/app.min.js'
+            }
+        },
         //https://github.com/gruntjs/grunt-contrib-clean
-        //clean: {
-        //    folder: ['build/'],
-        //}
+        clean: {
+            folder: ['build/'],
+        }
 
     });
-    grunt.loadNpmTasks('grunt-contrib-less');
+    //grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -104,5 +103,6 @@
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     //grunt.registerTask('default', ["less", "copy", "concat", "concat_css", "uglify", "clean"]);
+    grunt.registerTask('default', ["copy", "concat", "concat_css", "uglify", "clean"]);
 
 };

@@ -228,6 +228,7 @@
     <Content Include="App\Boilerplate\BoilerplateApp\module.js" />
     <Content Include="App\Boilerplate\css\site.css" />
     <Content Include="App\Boilerplate\default.aspx" />
+    <Content Include="App\Boilerplate\dist\app.min.js" />
     <Content Include="App\Boilerplate\dist\libraries.css" />
     <Content Include="App\Boilerplate\dist\libraries.js" />
     <Content Include="App\Boilerplate\fonts\glyphicons-halflings-regular.svg" />

@@ -28,7 +28,6 @@
         stopsRepo.getStops().then(function (data) {
             model.stops = data;
             localStorage.setObject(key, data);
-            console.log("Got stops and updated local storage.");
         });
 
     };

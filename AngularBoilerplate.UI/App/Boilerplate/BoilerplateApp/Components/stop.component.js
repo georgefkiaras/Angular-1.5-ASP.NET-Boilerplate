@@ -1,10 +1,8 @@
 ﻿(function () {
 
     var module = angular.module("boilerplateModule");
-    console.log("Stop file.");
     var controller = function (hubProxy, stopsRepo) {
         var model = this;
-        console.log("stop controller.");
         var signalHub = null;
         model.advisories = new Array();
         model.$routerOnActivate = function (next, previous) {
@@ -32,7 +30,6 @@
         var getStop = function () {
             stopsRepo.getStop(model.id).then(function (data) {
                 model.stop = data;
-                console.log(model.stop);
             });
         };
     };
