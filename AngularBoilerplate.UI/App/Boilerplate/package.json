@@ -1,0 +1,30 @@
+{
+  "name": "angularboilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "repository": "Z",
+  "license": "GPL-1.0-or-later",
+  "dependencies": {
+    "angular": "1.6.9",
+    "angular-signalr-hub": "~1.6.3",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.3.1",
+    "ngcomponentrouter": "^2.1.0",
+    "signalr": "^2.2.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "grunt": "^1.0.2",
+    "grunt-babel": "^7.0.0",
+    "grunt-concat-css": "^0.3.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^3.3.0"
+  }
+}

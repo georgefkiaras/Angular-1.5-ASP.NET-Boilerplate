@@ -1,0 +1,18 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+.ajaxLoader {
+    position: fixed;
+    box-sizing: content-box;
+    top: 10px;
+    left: 20px;
+    border-radius: 40px;
+    border: 2px solid #f0ad4e;
+    padding: 3px;
+    width: 16px;
+    height: 16px;
+    z-index: 3000;
+}

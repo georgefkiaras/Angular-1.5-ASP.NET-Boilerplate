@@ -57,7 +57,7 @@ namespace AngularBoilerplate.Data.Models.Repositories
 
         public List<StopDto> GetAllStops()
         {
-            return _stops.Where(s => string.IsNullOrEmpty(s.ParentStation)).ToList();
+            return _stops.Where(s => string.IsNullOrEmpty(s.ParentStation)).OrderBy(s => s.Name).ToList();
         }
 
         public StopDto GetStop(string stopId)

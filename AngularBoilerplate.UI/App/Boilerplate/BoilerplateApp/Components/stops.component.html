@@ -1,0 +1,18 @@
+﻿<h2>
+    Stops ({{model.stops.length}})
+</h2>
+<p>{{model.time}}</p>
+<p>
+    <input type="text" ng-model="model.filterObj.Name" placeholder="Search Stops" />
+    <span class="glyphicon glyphicon-search signSearch"></span>
+</p>
+<hr />
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="stop in model.stops | filter:model.filterObj">
+        <a ng-link="['Stop', { id:stop.Id }]">
+            <span class="pull-left">
+                {{stop.Name}}
+            </span>
+        </a>
+    </div>
+</div>
